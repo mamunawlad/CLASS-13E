@@ -1,0 +1,131 @@
+/* COMMON CSS START HERE */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "arial";
+}
+.container {
+  width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+
+/* COMMON CSS END HERE */
+
+.slide img{
+
+    display: block;
+    width: 100%;
+    border-radius: 7%;
+}
+.slide{
+
+    margin: 0 15px;
+    border-radius: 25%;
+    transform: scale(.8);
+    transition: .35s;
+    position: relative;
+}
+.slide.slick-center{
+  transform: scale(1);
+}
+.slide .overlay{
+  position: absolute;
+  inset: 0;
+  border-radius: 35%;
+  background-color: #11111168;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: .3s;
+}
+
+.slide.slick-center .overlay{
+  opacity: 1;
+}
+
+.slide.slick-center .overlay * {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.slide .overlay  * {
+transform: translateY(250px);
+opacity: 1;
+visibility: hidden;
+transition: .35s;
+transition-delay: .15s;
+
+}
+.container{
+  position: relative;
+}
+
+.leftArrows,
+.rightArrows{
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 25px;
+  text-align: center;
+  line-height: 40px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.leftArrows{
+  left: 33%;
+}
+.rightArrows{
+  right: 33%;
+}
+.slider-dots{
+  text-align: center;
+  margin-top: 35px;
+}
+.slider-dots li{
+  display: inline-block;
+  margin: 0 10px;
+}
+.slider-dots li button{
+  width: 10px;
+  height: 10px;
+  border-radius: 35%;
+  color: transparent;
+  border: none;
+  outline: none;
+  background-color: black;
+  transition: .3s;
+}
+.slider-dots li.slick-active button{
+  width: 15px;
+  height: 15px;
+  background-color: blueviolet;
+}
